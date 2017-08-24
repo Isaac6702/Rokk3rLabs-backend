@@ -7,6 +7,6 @@ export default {
     port: 3000
   },
   db: {
-    mongo: 'mongodb://127.0.0.1:27017/test'
+    mongo: 'mongodb://mongo:27017/test'
   }
 }
