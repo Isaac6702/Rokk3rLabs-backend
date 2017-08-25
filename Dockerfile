@@ -4,6 +4,6 @@ EXPOSE 3000
 
 WORKDIR /app
 ADD . /app/
-RUN npm install && npm run build  && npm run seed-test
+RUN npm install && npm run build
 
-CMD NODE_ENV=$ENV node ./dist/index.js
+CMD NODE_ENV=$ENV node ./dist/dump/index.js && NODE_ENV=$ENV node ./dist/index.js

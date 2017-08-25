@@ -9,7 +9,8 @@
     "test": "npm run lint &&  npm run seed-test && NODE_ENV=test nyc --reporter=html --reporter=text mocha ./src/tests/*-test.js --timeout 10000 -c --compilers js:babel-core/register",
     "lint": "standard",
     "seed-dev": "NODE_ENV=dev babel-node ./src/dump/index.js",
-    "seed-test": "NODE_ENV=test babel-node ./src/ddump/index.js",
+    "seed-test": "NODE_ENV=test babel-node ./src/dump/index.js",
+    "seed-docker": "NODE_ENV=docker babel-node ./src/dump/index.js",
     "docker": "docker-compose up"
   },
   "standard": {
