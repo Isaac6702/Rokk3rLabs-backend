@@ -5,12 +5,8 @@ function moreRelevance (input, results) {
   if (!results || results.length === 0) {
     return
   }
-  const result = results.filter((result) => {
-    if (input.includes(result.name)) {
-      return true
-    }
-  })
-  return result && result.length > 0 ? result[0].name : undefined
+  const result = results.find(result => input.includes(result.name))
+  return result.name
 }
 
 async function getSearchBrands (input) {
